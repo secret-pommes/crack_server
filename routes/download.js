@@ -12,7 +12,6 @@ app.get("/:file", (req, res) => {
     req.params.file
   );
   const location = baseLocation.split("routes\\")[1];
-  console.log(location);
 
   if (fs.existsSync(location) && config.settings.allowDownload) {
     res.sendFile(location);

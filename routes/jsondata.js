@@ -11,7 +11,6 @@ app.get("/getKeys", (req, res) => {
   );
   const location = baseLocation.split("routes\\")[1];
   const final = require(location);
-  console.log(final);
   res.json(final);
 });
 

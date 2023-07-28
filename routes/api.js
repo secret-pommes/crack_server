@@ -12,7 +12,7 @@ app.get("/version", (req, res) => {
 app.get("/checkSync", (req, res) => {
   axios
     .get(
-      "https://raw.githubusercontent.com/secret-pommes/EraBackendFake/main/package.json"
+      "https://raw.githubusercontent.com/secret-pommes/crack_server/main/package.json"
     )
     .then((response) => {
       const versionOnGit = response.data.version;
@@ -20,9 +20,13 @@ app.get("/checkSync", (req, res) => {
         res.json(["Sync with github."]);
       } else if (version != versionOnGit) {
         res.json(["Server is out of sync!"]);
+      } else {
+        res.json(["Cant check sync!"]);
       }
     })
-    .catch(() => {});
+    .catch(() => {
+      res.json(["Could not check sync!"]);
+    });
 });
 
 app.get("/lastpatch", (req, res) => {
