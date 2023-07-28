@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Tektur&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Tektur", cursive;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: red;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: red;
+}
+
+p {
+  color: red;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.middle {
+  position: relative;
+  top: -100px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motd {
+  position: relative;
+  top: -10px;
+}
+
+.lefttitle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.sub {
+  font-size: 20px;
+  position: relative;
+  top: -40px;
+}
+
+code {
+  color: rgb(1337, 1337, 1337);
+}

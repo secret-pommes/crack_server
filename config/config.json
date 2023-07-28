@@ -1,0 +1,10 @@
+{
+  "server": { "port": 8443, "UseSSL": true },
+  "settings": {
+    "allowDownload": true,
+    "saveDirs": {
+      "files": "C:\\crack_server\\prod\\files\\",
+      "json": "C:\\crack_server\\prod\\json\\"
+    }
+  }
+}
