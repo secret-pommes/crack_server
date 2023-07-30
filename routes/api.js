@@ -6,7 +6,11 @@ const lastpatch = require("../package.json").lastpatch;
 const version = require("../package.json").version;
 
 app.get("/version", (req, res) => {
-  res.json(["v" + version]);
+  if (version) {
+    res.json(["v" + version]);
+  } else {
+    res.json(["Could not check version!"]);
+  }
 });
 
 app.get("/checkSync", (req, res) => {

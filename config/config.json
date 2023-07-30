@@ -4,7 +4,8 @@
     "allowDownload": true,
     "saveDirs": {
       "files": "C:\\crack_server\\prod\\files\\",
-      "json": "C:\\crack_server\\prod\\json\\"
+      "json": "C:\\crack_server\\prod\\json\\",
+      "img": "C:\\crack_server\\prod\\images\\"
     }
   }
 }

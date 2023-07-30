@@ -42,6 +42,10 @@ footer {
   bottom: 0;
 }
 
+code {
+  color: rgb(1337, 1337, 1337);
+}
+
 .middle {
   position: relative;
   top: -100px;
@@ -66,8 +70,4 @@ footer {
   font-size: 20px;
   position: relative;
   top: -40px;
-}
-
-code {
-  color: rgb(1337, 1337, 1337);
 }

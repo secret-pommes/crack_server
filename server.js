@@ -38,6 +38,7 @@ if (config.server.UseSSL) {
 app.use(require("./routes/pages.js"));
 app.use("/api", require("./routes/api.js"));
 app.use("/assets", require("./routes/assets.js"));
+app.use("/cdn", require("./routes/cdn.js"));
 app.use("/dl", require("./routes/download.js"));
 app.use("/jsondata", require("./routes/jsondata.js"));
 

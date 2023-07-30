@@ -11,7 +11,7 @@ app.get("/css/:file", (req, res) => {
   if (fs.existsSync(location)) {
     res.sendFile(location);
   } else {
-    res.json(["File not found."]).status(404);
+    res.json({ description: "Error 404, file not found." }).status(404);
   }
 });
 
@@ -23,7 +23,7 @@ app.get("/js/:file", (req, res) => {
   if (fs.existsSync(location)) {
     res.sendFile(location);
   } else {
-    res.json(["File not found."]).status(404);
+    res.json({ description: "Error 404, file not found." }).status(404);
   }
 });
 
@@ -35,7 +35,7 @@ app.get("/img/:file", (req, res) => {
   if (fs.existsSync(location)) {
     res.sendFile(location);
   } else {
-    res.json(["File not found."]).status(404);
+    res.json({ description: "Error 404, file not found." }).status(404);
   }
 });
 

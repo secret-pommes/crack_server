@@ -11,18 +11,18 @@ app.get("/:file", (req, res) => {
     config.settings.saveDirs.files,
     req.params.file
   );
-  const location = baseLocation.split("routes\\")[1];
+  const location = baseLocation.split("routes\\")[1]; // NOTE: this may not work on every devices.
 
   if (fs.existsSync(location) && config.settings.allowDownload) {
     res.sendFile(location);
   } else if (!fs.existsSync(location)) {
-    res.json(["File not found (Error 404)"]).status(404);
+    res.json({ description: "Error 404, file not found." }).status(404);
   } else if (!config.settings.allowDownload) {
     res
-      .json(["Downloads are currently disabled, please try again later."])
+      .json({ description: "Error 405, downloads are currently disabled." })
       .status(405);
   } else {
-    res.json(["Internal Server Error (Error 500)"]).status(500);
+    res.json({ description: "Error 500, Internal server error." }).status(500);
   }
 });
 
