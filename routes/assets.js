@@ -15,6 +15,18 @@ app.get("/css/:file", (req, res) => {
   }
 });
 
+app.get("/img/:file", (req, res) => {
+  const location = path.join(
+    __dirname,
+    `../public/assets/img/${req.params.file}`
+  );
+  if (fs.existsSync(location)) {
+    res.sendFile(location);
+  } else {
+    res.json({ description: "Error 404, file not found." }).status(404);
+  }
+});
+
 app.get("/js/:file", (req, res) => {
   const location = path.join(
     __dirname,
@@ -27,10 +39,10 @@ app.get("/js/:file", (req, res) => {
   }
 });
 
-app.get("/img/:file", (req, res) => {
+app.get("/sound/:file", (req, res) => {
   const location = path.join(
     __dirname,
-    `../public/assets/img/${req.params.file}`
+    `../public/assets/sound/${req.params.file}`
   );
   if (fs.existsSync(location)) {
     res.sendFile(location);

@@ -71,3 +71,16 @@ code {
   position: relative;
   top: -40px;
 }
+
+.musicPlayer {
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: black;
+}
+
+audio::-webkit-media-controls-panel{
+  background-color: red;
+}
