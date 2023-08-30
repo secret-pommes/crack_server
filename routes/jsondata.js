@@ -4,6 +4,7 @@ const path = require("path");
 const fs = require("fs");
 
 const config = require("../config/config.json");
+const logger = require("../structs/logger.js");
 
 app.get("/", (req, res) => {
   const baseLocation = path.join(
@@ -14,8 +15,10 @@ app.get("/", (req, res) => {
   const final = require(location);
   if (fs.existsSync(final)) {
     res.json(final);
+    //logger.info("Send keys to client.");
   } else {
     res.json({ description: "Error 404, file not found." }).status(404);
+    //logger.error("json data not found for keys.");
   }
 });
 

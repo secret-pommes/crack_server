@@ -7,7 +7,7 @@ const version = require("../package.json").version;
 
 app.get("/version", (req, res) => {
   if (version) {
-    res.json(["v" + version]);
+    res.json([`v${version}`]);
   } else {
     res.json(["Could not check version!"]);
   }
@@ -25,7 +25,7 @@ app.get("/checkSync", (req, res) => {
       } else if (version != versionOnGit) {
         res.json(["Server is out of sync!"]);
       } else {
-        res.json(["Cant check sync!"]);
+        res.json(["Cannot check sync!"]);
       }
     })
     .catch(() => {

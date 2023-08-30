@@ -6,7 +6,8 @@
     "fs": "^0.0.1-security",
     "https": "^1.0.0",
     "nodemon": "^3.0.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "winston": "^3.10.0"
   },
   "version": "2.1",
   "lastpatch": "19.08.2023",

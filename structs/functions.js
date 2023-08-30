@@ -18,20 +18,7 @@ function ErrorLog(msg) {
   );
 }
 
-function verifyFile(file, location) {
-  try {
-    if (fs.existsSync(path.join(__dirname, `${location}/${file}`))) {
-      return true;
-    } else {
-      return false;
-    }
-  } catch {
-    return false;
-  }
-}
-
 module.exports = {
   ServerLog,
   ErrorLog,
-  verifyFile,
 };

@@ -1,6 +1,8 @@
 {
   "server": { "port": 8443, "UseSSL": true },
   "settings": {
+    "checkInterval": "1h",
+    "//": "Backend does only support 1, 2 and 3H",
     "allowDownload": true,
     "saveDirs": {
       "files": "C:\\crack_server\\prod\\files\\",
